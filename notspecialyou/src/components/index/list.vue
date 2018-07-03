@@ -46,8 +46,10 @@
         height: 60px;
         /* background-color: red; */
         margin: 0 auto;
-        /* margin-top: 20px; */
-        display: flex
+        margin-top: 20px;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
     }
 
     .title {
@@ -70,5 +72,6 @@
 
     .type span {
         font-size: 12px;
+        color: #000;
     }
 </style>
