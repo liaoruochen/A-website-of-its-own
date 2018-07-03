@@ -1,21 +1,19 @@
 <template>
   <div id="app">
+    <footers></footers>
   </div>
 </template>
 
 <script>
+import Footers from '@/components/Footers'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Footers
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
