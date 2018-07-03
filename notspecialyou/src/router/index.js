@@ -4,9 +4,10 @@ import Footers from '@/components/Footers'
 Vue.use(Router)
 
 export default new Router({
-  // routes: [
-  //   {
-      
-  //   }
-  // ]
+  routes: [
+    {
+      path: '/',
+      component: Footers
+    }
+  ]
 })

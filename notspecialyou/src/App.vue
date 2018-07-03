@@ -1,16 +1,12 @@
 <template>
   <div id="app">
-    <footers></footers>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Footers from '@/components/Footers'
 export default {
   name: 'App',
-  components: {
-    Footers
-  }
 }
 </script>
 
