@@ -1,22 +1,18 @@
 <template>
   <div id="app">
-    <index></index>
+    <router-view/>
   </div>
 </template>
 
 
 
 <script>
-import index from '@/views/index'
 export default {
-  name: 'App',
-  components:{
-    index
-  }
+  name: 'App'
 }
 </script>
 
 <style>
- @import '../static/css/base.css';
+ @import './common/style/base.css';
 
 </style>
