@@ -1,26 +1,26 @@
 <template>
-    <div class="box">
+    <div class="list-box">
         <ul class="list">
-            <li class="title">
-                <router-link to="/" class="type">
+            <li class="list-title" @mouseout="subscript">
+                <router-link to="/" class="list-type">
                     <img src="@/assets/home1.png" alt="">
                     <span>首页</span>
                 </router-link>
             </li>
-            <li class="title">
-                <router-link to="/" class="type">
+            <li class="list-title">
+                <router-link to="/" class="list-type">
                     <img src="@/assets/label1.png" alt="">
                     <span>标签</span>
                 </router-link>
             </li>
-            <li class="title">
-                <router-link to="/" class="type">
+            <li class="list-title">
+                <router-link to="/" class="list-type">
                     <img src="@/assets/archives1.png" alt="">
                     <span>归档</span>
                 </router-link>
             </li>
-            <li class="title">
-                <router-link to="/" class="type">
+            <li class="list-title">
+                <router-link to="/about" class="list-type">
                     <img src="@/assets/people1.png" alt="">
                     <span>关于</span>
                 </router-link>
@@ -36,12 +36,13 @@
 </script>
 
 <style scoped>
-    .box {
+    .list-box {
         width: 100%;
+        
     }
 
     .list {
-        max-width: 250px;
+        max-width: 450px;
         min-width: 230px;
         height: 60px;
         /* background-color: red; */
@@ -52,12 +53,13 @@
         border-radius: 10px;
     }
 
-    .title {
+    .list-title {
         display: inline-block;
         flex: 1;
+        position: relative;
     }
 
-    .type {
+    .list-type {
         display: block;
         height: 60px;
         display: flex;
@@ -65,13 +67,15 @@
         justify-content: center;
     }
 
-    .type img {
+    .list-type img {
         width: 20px;
         height: 20px;
     }
 
-    .type span {
+    .list-type span {
         font-size: 12px;
         color: #000;
     }
+
+
 </style>
