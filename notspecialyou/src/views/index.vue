@@ -1,21 +1,28 @@
 <template>
     <div class="box">
+        <linkel></linkel>
         <middletitle></middletitle>
+        <Footers style="position: absolute;bottom: 10px"></Footers>
     </div>
 
 </template>
 
 <script>
 import title from "@/components/index/title";
+import Footers from '@/components/Footers'
+import linkel from '@/components/index/linkel'
 
 export default {
   components: {
-    middletitle: title
+    middletitle: title,
+    Footers,
+    linkel
   }
 };
 </script>
 
 <style scoped>
+
 .box {
   height: 100vh;
   width: 100%;
@@ -27,4 +34,5 @@ export default {
 
   background-size: cover;
 }
+
 </style>
