@@ -3,9 +3,9 @@
         <footer>
             <div class="footer-msg__top">
                 <span>
-                    <img src="../assets/c.png"/>
+                    <img src="../../assets/c.png"/>
                     <span>2018-2020 | </span>
-                    <img src="../assets/heart.png"/>
+                    <img src="../../assets/heart.png"/>
                     <span>敲代码的李某人</span>                    
                 </span>
             </div>
@@ -24,6 +24,8 @@ export default {
 
 <style scoped>
 .footer-msg {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 50px;
     text-align: center;
