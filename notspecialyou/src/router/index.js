@@ -13,8 +13,8 @@ export default new Router({
       path:"/",
       component:index
     },{
-      path: '/',
-      component: Footers
+      path: '/tags',
+      component: tags
     },
     {
       path:'/about',
