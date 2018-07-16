@@ -8,15 +8,16 @@
 <script>
 import userInfo from '@/components/userInfo/userInfo'
 export default {
-    components: {
-        userInfo
-    }
+  components: {
+    userInfo
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-hr
-    width 700px
-    border 1px dashed #DDDDDD
-    margin 15px auto    
+hr {
+    width: 700px;
+    border: 1px dashed #DDDDDD;
+    margin: 15px auto;
+}
 </style>

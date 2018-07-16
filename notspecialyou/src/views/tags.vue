@@ -9,13 +9,12 @@
 import topNavigation from '@/components/top-navigation/top-navigation'
 import Footers from '@/components/Footers/Footers'
 export default {
-    components: {
-        topNavigation,
-        Footers
-    }
+  components: {
+    topNavigation,
+    Footers
+  }
 }
 </script>
 
 <style>
-
 </style>

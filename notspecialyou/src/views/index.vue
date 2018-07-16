@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import title from "@/components/index/title";
+import title from '@/components/index/title'
 import Footers from '@/components/Footers/Footers'
 import linkel from '@/components/index/linkel'
 
