@@ -17,7 +17,8 @@
 </template>
 
 <script>
-export default {}
+export default {
+}
 </script>
 
 <style scoped>
@@ -29,7 +30,7 @@ export default {}
     text-align: center;
 }
 .footer-msg__bottom {
-  padding: 10px 0;
+  padding-top: 10px;
 }
 span {
   color: #acacac;
