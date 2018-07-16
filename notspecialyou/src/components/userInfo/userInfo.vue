@@ -109,12 +109,7 @@ h2
         margin-bottom 10px
         height 25px
         line-height 25px
-<<<<<<< HEAD
-        svg
-            line-height 25px
-=======
         svg 
             line-height 25px  
->>>>>>> ljh
 
 </style>
