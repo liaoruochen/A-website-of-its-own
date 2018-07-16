@@ -32,55 +32,52 @@
 </template>
 
 <script>
-    export default {
-
-    };
+export default {}
 </script>
 
 <style scoped>
+.navigationBar {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* display: none; */
+}
 
-    .navigationBar {
-        width: 100%;
-        height: 60px;
-        background-color: rgba(0, 0, 0, 0.2);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        /* display: none; */
-    }
+.nav {
+  min-width: 320px;
+  max-width: 700px;
+  height: 60px;
+  margin: 0 auto;
+}
 
-    .nav {
-        min-width: 320px;
-        max-width: 700px;
-        height: 60px;
-        margin: 0 auto;
-    }
+.nav-ul {
+  display: flex;
+}
 
-    .nav-ul {
-        display: flex
-    }
+.title {
+  flex: 1;
+  display: inline-block;
+  height: 60px;
+}
 
-    .title {
-        flex: 1;
-        display: inline-block;
-        height: 60px;
-    }
+.title .type {
+  display: block;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .title .type {
-        display: block;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.title span {
+  line-height: 60px;
+}
 
-    .title span {
-        line-height: 60px;
-    }
-
-    .title img {
-        width: 20px;
-        height: 20px;
-    }
+.title img {
+  width: 20px;
+  height: 20px;
+}
 </style>

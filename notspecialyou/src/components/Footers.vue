@@ -6,7 +6,7 @@
                     <img src="../assets/c.png"/>
                     <span>2018-2020 | </span>
                     <img src="../assets/heart.png"/>
-                    <span>敲代码的李某人</span>                    
+                    <span>敲代码的李某人</span>
                 </span>
             </div>
             <div class="footer-msg__bottom">
@@ -17,27 +17,25 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
 .footer-msg {
-    width: 100%;
-    height: 50px;
-    text-align: center;
+  width: 100%;
+  height: 50px;
+  text-align: center;
 }
 .footer-msg__bottom {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 span {
-    color: #ACACAC;
-    text-align: center;
-    font-size: 16px;
+  color: #acacac;
+  text-align: center;
+  font-size: 16px;
 }
 img {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
 </style>
