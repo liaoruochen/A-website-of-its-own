@@ -6,7 +6,7 @@
                     <img src="../../assets/c.png"/>
                     <span>2018-2020 | </span>
                     <img src="../../assets/heart.png"/>
-                    <span>敲代码的李某人</span>                    
+                    <span>敲代码的李某人</span>
                 </span>
             </div>
             <div class="footer-msg__bottom">
