@@ -46,7 +46,11 @@ export default {
 .userInfo
     width 700px
     height 400px
+<<<<<<< HEAD
     margin 0 auto
+=======
+    margin 0 auto 
+>>>>>>> ljh
     margin-top 50px
 .userInfo:before
     content ' '
@@ -59,7 +63,11 @@ export default {
     background-size 22px 22px
     border-top 1px solid #ccc
 .avatar
+<<<<<<< HEAD
     img
+=======
+    img 
+>>>>>>> ljh
         margin-top 25px
         border-radius 2px
         overflow hidden
@@ -101,7 +109,12 @@ h2
         margin-bottom 10px
         height 25px
         line-height 25px
+<<<<<<< HEAD
         svg
             line-height 25px
+=======
+        svg 
+            line-height 25px  
+>>>>>>> ljh
 
 </style>

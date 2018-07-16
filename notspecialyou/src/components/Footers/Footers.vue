@@ -5,8 +5,13 @@
                 <span>
                     <img src="../../assets/c.png"/>
                     <span>2018-2020 | </span>
+<<<<<<< HEAD:notspecialyou/src/components/Footers/Footers.vue
                     <img src="../assets/heart.png"/>
                     <span>敲代码的李某人</span>
+=======
+                    <img src="../../assets/heart.png"/>
+                    <span>敲代码的李某人</span>                    
+>>>>>>> ljh:notspecialyou/src/components/Footers/Footers.vue
                 </span>
             </div>
             <div class="footer-msg__bottom">
@@ -22,9 +27,17 @@ export default {}
 
 <style scoped>
 .footer-msg {
+<<<<<<< HEAD:notspecialyou/src/components/Footers/Footers.vue
   width: 100%;
   height: 50px;
   text-align: center;
+=======
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+>>>>>>> ljh:notspecialyou/src/components/Footers/Footers.vue
 }
 .footer-msg__bottom {
   padding: 10px 0;
