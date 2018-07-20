@@ -23,6 +23,6 @@ export default {
   opacity 1
 .fade-leave-active
   opacity 0
-  transition opacity 0.5s 
+  transition opacity 0.5s
 
 </style>
