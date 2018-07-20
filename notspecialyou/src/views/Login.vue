@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import {check} from '@/func/func.js'
 export default {
   data () {
@@ -51,17 +52,33 @@ export default {
   },
   methods: {
     login () {
-      check(this.ruleForm.admin, this.ruleForm.password,
-      () => {
-        this.$router.push({path: '/system'})
-      },
-      () => {
-        const h = this.$createElement
-        this.$notify({
-          title: '提示',
-          message: h('i', {style: 'color: red'}, '账号或密码错误'),
-          type: 'warning'
-        })
+      const userinfo = {
+        username: this.ruleForm.admin,
+        password: this.ruleForm.password
+      }
+      axios.post('http://127.0.0.1:3000/user/login',userinfo).then(msg => {
+        console.log(msg)
+        check(msg,
+        () => {
+          this.$router.push({path: '/system'})
+        },
+        () => {
+          const h = this.$createElement
+          this.$notify({
+            title: '提示',
+            message: h('i', {style: 'color: red'}, '您输入的账号有误'),
+            type: 'warning'
+          })
+        },
+        () => {
+          const h = this.$createElement
+          this.$notify({
+            title: '提示',
+            message: h('i', {style: 'color: red'}, '您输入的密码有误'),
+            type: 'warning'
+          })
+        }
+        )
       })
     }
   }
