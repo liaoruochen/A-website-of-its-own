@@ -4,25 +4,19 @@
             <li class="list-title">
                 <router-link to="/" class="list-type">
                     <img src="@/assets/home1.png" alt="">
-                    <span>首页</span>
+                    <span>Home</span>
                 </router-link>
             </li>
             <li class="list-title">
                 <router-link to="/" class="list-type">
                     <img src="@/assets/label1.png" alt="">
-                    <span>标签</span>
-                </router-link>
-            </li>
-            <li class="list-title">
-                <router-link to="/" class="list-type">
-                    <img src="@/assets/archives1.png" alt="">
-                    <span>归档</span>
+                    <span>Article</span>
                 </router-link>
             </li>
             <li class="list-title">
                 <router-link to="/about" class="list-type">
                     <img src="@/assets/people1.png" alt="">
-                    <span>关于</span>
+                    <span>about</span>
                 </router-link>
             </li>
         </ul>

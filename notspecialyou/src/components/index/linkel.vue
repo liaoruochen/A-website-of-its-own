@@ -32,14 +32,6 @@ export default {}
 </script>
 
 <style scoped>
-.linkel {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-.linkel-ul {
-  margin-right: 40px;
-}
 .linkel-ul li {
   display: inline-block;
   margin-top: 20px;
