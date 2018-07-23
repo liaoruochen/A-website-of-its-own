@@ -5,25 +5,19 @@
                 <li class="title">
                     <router-link to="/" class="type">
                         <img src="@/assets/home.png" alt="">
-                        <span>首页</span>
+                        <span>Home</span>
                     </router-link>
                 </li>
                 <li class="title">
                     <router-link to="/" class="type">
                         <img src="@/assets/label.png" alt="">
-                        <span>标签</span>
-                    </router-link>
-                </li>
-                <li class="title">
-                    <router-link to="/" class="type">
-                        <img src="@/assets/archives.png" alt="">
-                        <span>归档</span>
+                        <span>Article</span>
                     </router-link>
                 </li>
                 <li class="title">
                     <router-link to="/" class="type">
                         <img src="@/assets/people.png" alt="">
-                        <span>关于</span>
+                        <span>About</span>
                     </router-link>
                 </li>
             </ul>
@@ -39,18 +33,14 @@ export default {}
 .navigationBar {
   width: 100%;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  /* background-color: rgba(0, 0, 0, 0.2); */
   /* display: none; */
 }
 
 .nav {
   min-width: 320px;
   max-width: 700px;
-  height: 60px;
+  height: 50px;
   margin: 0 auto;
 }
 
