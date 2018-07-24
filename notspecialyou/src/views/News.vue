@@ -57,14 +57,13 @@ export default {
         images: 'https://github.com/liaoruochen/A-website-of-its-own/blob/master/notspecialyou/src/assets/222.png?raw=true'
       }
       if (data.title && data.content) {
-        const saveArticle = await postArticle(data).then(() => {
+          await postArticle(data).then((msg) => {
           this.$message({
             showClose: true,
             message: '发布成功',
             type: 'success'
           })
         })
-        console.log(saveArticle)
         this.openLoading = true
       } else if (!data.title) {
         this.$message.error('请输入标题')

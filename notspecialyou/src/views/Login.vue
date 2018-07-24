@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import {check} from '@/func/func.js'
+import { checkForm } from '@/api/getData.js'
+import { check } from '@/api/func.js'
 export default {
   data () {
     var checkAdmin = (rule, value, callback) => {
@@ -41,43 +41,39 @@ export default {
         password: null
       },
       rules: {
-        admin: [
-          {validator: checkAdmin, trigger: 'blur'}
-        ],
-        password: [
-          {validator: checkPassword, trigger: 'blur'}
-        ]
+        admin: [{ validator: checkAdmin, trigger: 'blur' }],
+        password: [{ validator: checkPassword, trigger: 'blur' }]
       }
     }
   },
   methods: {
-    login () {
+    async login () {
       const userinfo = {
         username: this.ruleForm.admin,
         password: this.ruleForm.password
       }
-      axios.post('http://127.0.0.1:3000/user/login',userinfo).then(msg => {
-        console.log(msg)
-        check(msg,
-        () => {
-          this.$router.push({path: '/system'})
-        },
-        () => {
-          const h = this.$createElement
-          this.$notify({
-            title: '提示',
-            message: h('i', {style: 'color: red'}, '您输入的账号有误'),
-            type: 'warning'
-          })
-        },
-        () => {
-          const h = this.$createElement
-          this.$notify({
-            title: '提示',
-            message: h('i', {style: 'color: red'}, '您输入的密码有误'),
-            type: 'warning'
-          })
-        }
+      await checkForm(userinfo).then(msg => {
+        check(
+          msg,
+          () => {
+            this.$router.push({ path: '/system' })
+          },
+          () => {
+            const h = this.$createElement
+            this.$notify({
+              title: '提示',
+              message: h('i', { style: 'color: red' }, '您输入的账号有误'),
+              type: 'warning'
+            })
+          },
+          () => {
+            const h = this.$createElement
+            this.$notify({
+              title: '提示',
+              message: h('i', { style: 'color: red' }, '您输入的密码有误'),
+              type: 'warning'
+            })
+          }
         )
       })
     }
