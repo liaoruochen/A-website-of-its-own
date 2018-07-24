@@ -12,3 +12,9 @@ export const checkForm = (userinfo) => new Promise((resolve, reject) => {
     // console.log(res)
   })
 })
+
+export const articleList = () => new Promise((resolve, reject) => {
+  axios.get('http://127.0.0.1:3000/user/articleList').then((res) => {
+    resolve(res)
+  })
+})
