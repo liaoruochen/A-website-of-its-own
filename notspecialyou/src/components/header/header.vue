@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="container-body">
       <div class="head">
         <img class="pic" src="@/assets/222.png" alt="">
@@ -8,7 +7,6 @@
       <h3>一个正在努力学习的菜鸟</h3>
       <linkel></linkel>
     </div>
-  </div>
 </template>
 
 <script>
