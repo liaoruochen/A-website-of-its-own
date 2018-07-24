@@ -13,8 +13,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './common/style/base.css';
-
+@import './common/style/base.css'
 .fade-enter
   opacity 0
 .fade-enter-active

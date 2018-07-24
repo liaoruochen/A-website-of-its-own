@@ -24,6 +24,12 @@ app.use(bodyParser())
   // })
   // let users = await User.findOne({}).exec()
   // console.log(users)
+
+  // const Article = mongoose.model('Article')
+  // let article = new Article({title: '让咖啡与代码相伴', content: 'ssssssssssss',html: 'ssssssssss'})
+  // article.save().then(() => {
+  //   console.log('插入成功')
+  // })
 })()
 
 app.listen(3000, () => {
