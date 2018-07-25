@@ -30,8 +30,7 @@ router.post('/article', bodyParser(), async (ctx) => {
 
 router.get('/articleList', async (ctx) => {
   const Article = mongoose.model('Article')
-  let article = await Article.find({}).exec()
+  let article = await Article.find().exec()
   ctx.body = article
-  // console.log(article)
 })
 module.exports = router
