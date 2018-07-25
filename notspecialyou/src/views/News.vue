@@ -57,7 +57,7 @@ export default {
         images: 'https://github.com/liaoruochen/A-website-of-its-own/blob/master/notspecialyou/src/assets/222.png?raw=true'
       }
       if (data.title && data.content) {
-          await postArticle(data).then((msg) => {
+        await postArticle(data).then((msg) => {
           this.$message({
             showClose: true,
             message: '发布成功',
