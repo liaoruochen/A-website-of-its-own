@@ -8,7 +8,7 @@
                 </router-link>
             </li>
             <li class="list-title">
-                <router-link to="/" class="list-type">
+                <router-link to="/articlelist" class="list-type">
                     <img src="@/assets/label1.png" alt="">
                     <span>Article</span>
                 </router-link>

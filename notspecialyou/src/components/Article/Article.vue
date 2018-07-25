@@ -5,14 +5,14 @@
         <div class="list-top">
           <div class="author-img">
             <img class="photo" src="@/assets/222.png" alt="">
-            <span>{{item.author}}</span>
+            <span class="size">{{item.author}}</span>
             <img class="rili" src="@/assets/time.png" alt="">
-            <span class="time">{{item.data.split('T')[0]}}</span>
+            <span class="size">{{item.data.split('T')[0]}}</span>
           </div>
         </div>
         <div class="bigphoto">
         </div>
-        <h2 class="title">{{item.title}}</h2>
+        <h2 class="title" @click="toessay(item._id,item)">{{item.title}}</h2>
         <p class="content">{{item.content}}</p>
       </div>
     </div>
@@ -25,8 +25,13 @@ export default {
     return {
     }
   },
-  props : {
+  props: {
     List: Array
+  },
+  methods: {
+    toessay (id) {
+      this.$router.push({ path: `/article/${id}` })
+    }
   }
 }
 </script>
@@ -55,22 +60,26 @@ export default {
           width 21px
           height 21px
           margin-left 30px
+          margin-right 20px
         .time
           margin-left 5px
         @media screen and (max-width 475px)
           .photo
             width 30px
             height 30px
-          span
-            font-size 13px
+          .size
+            font-size 12px
             letter-spacing 1px
           .rili
             width 18px
             height 18px
             margin-left 10px
+            margin-right 2px
         @media screen and (max-width 320px)
-          span 
-            font-size 10px        
+          .size
+            font-size 8px
+            margin-left 5px
+            margin-right 0px
     .bigphoto
       width 100%
       height 24vw
@@ -91,8 +100,7 @@ export default {
     .art-list
       height 280px
       .title
-        font-size 20px
-    
-
-
+        font-size 14px
+      .content
+        font-size 10px
 </style>

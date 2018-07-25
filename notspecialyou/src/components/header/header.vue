@@ -34,6 +34,7 @@ export default {
     color #666
     letter-spacing 5px
     font-weight 100
+    font-size 18px
   .head
     width 100%
     padding-top 5px
