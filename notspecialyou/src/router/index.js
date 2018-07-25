@@ -5,6 +5,8 @@ import about from '@/views/about'
 import login from '@/views/login'
 import system from '@/views/system'
 import news from '@/views/News'
+import NotFound from '@/views/404'
+import article from '@/views/article'
 import articlelist from '@/views/ArticleList'
 
 Vue.use(Router)
@@ -39,8 +41,17 @@ export default new Router({
     },
     {
       name: 'ArticleList',
-      path: '/arciclelist',
+      path: '/articlelist',
       component: articlelist
+    },
+    {
+      name: 'article',
+      path: `/article/:_id`,
+      component: article
+    },
+    {
+      path: '*',
+      component: NotFound
     }
 
   ]
