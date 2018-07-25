@@ -2,7 +2,7 @@
     <div class="box">
         <linkel style="position: absolute;top: 0px;right: 0px;"></linkel>
         <middletitle></middletitle>
-        <Footers style="position: absolute;bottom: 10px"></Footers>
+        <!-- <Footers style="position: absolute;bottom: 10px"></Footers> -->
     </div>
 
 </template>

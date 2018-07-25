@@ -1,23 +1,18 @@
 <template>
     <div class="about-container">
-        <userInfo></userInfo>
-        <hr>
+      <header-body></header-body>
     </div>
 </template>
 
 <script>
-import userInfo from '@/components/userInfo/userInfo'
+import headerBody from '@/components/header/header'
 export default {
   components: {
-    userInfo
+    headerBody
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-hr {
-    width: 700px;
-    border: 1px dashed #DDDDDD;
-    margin: 15px auto;
-}
+
 </style>

@@ -13,10 +13,10 @@ import headerBody from '@/components/header/header'
 import Article from '@/components/Article/Article'
 export default {
   async created () {
-    await articleList().then( (msg) => {
-      this.articleList = msg.data
+    await articleList().then((msg) => {
+      this.articleList = msg.data.reverse()
     })
-    console.log(this.articleList)
+    // console.log(this.articleList)
   },
   data () {
     return {
@@ -27,10 +27,10 @@ export default {
     headerBody,
     topNavigation,
     Article
+  },
+  computed: {
   }
 }
 </script>
 <style lang="stylus" scoped>
-.box
-  background-color #f4f5f5
 </style>
