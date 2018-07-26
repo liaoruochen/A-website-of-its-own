@@ -10,8 +10,7 @@
             <span class="size">{{item.data.split('T')[0]}}</span>
           </div>
         </div>
-        <div class="bigphoto">
-        </div>
+        <img :src="item.images" class="bigphoto" alt="">
         <h2 class="title" @click="toessay(item._id,item)">{{item.title}}</h2>
         <p class="content">{{item.content}}</p>
       </div>
@@ -32,6 +31,9 @@ export default {
     toessay (id) {
       this.$router.push({ path: `/article/${id}` })
     }
+  },
+  mounted () {
+    console.log(this.$refs)
   }
 }
 </script>
@@ -45,7 +47,8 @@ export default {
     margin 0 auto
     margin-bottom 20px
     position relative
-    background-color #fff
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius 20px
     .list-top
       height 50px
       .author-img
@@ -83,9 +86,11 @@ export default {
     .bigphoto
       width 100%
       height 24vw
-      background-image url('https://user-gold-cdn.xitu.io/2018/6/8/163dd6e704c4d213?imageView2/1/w/1080/h/320/q/85/format/webp/inter')
+      background-repeat: no-repeat
+      background-position: center 0;
       background-size cover
-      border-radius 5px
+      border-radius 10px
+      margin-top 10px
     .title
       color: #909090
       font-weight: 600

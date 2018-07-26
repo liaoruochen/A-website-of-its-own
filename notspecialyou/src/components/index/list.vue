@@ -35,7 +35,6 @@ export default {
 
 .list {
   max-width: 450px;
-  min-width: 230px;
   height: 60px;
   /* background-color: red; */
   margin: 0 auto;
@@ -43,6 +42,11 @@ export default {
   display: flex;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+}
+@media screen and (max-width: 800px){
+    .list {
+        width: 300px
+    }
 }
 
 .list-title {
@@ -65,7 +69,8 @@ export default {
 }
 
 .list-type span {
-  font-size: 12px;
+  font-size: 18px;
   color: #000;
+  margin-left: 10px
 }
 </style>

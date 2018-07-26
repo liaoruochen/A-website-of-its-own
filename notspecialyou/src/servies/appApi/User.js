@@ -28,6 +28,11 @@ router.post('/article', bodyParser(), async (ctx) => {
   })
 })
 
+router.post('/img', bodyParser(), async (ctx) => {
+  ctx.body = ctx.request.body
+  console.log(ctx.body)
+})
+
 router.get('/articleList', async (ctx) => {
   const Article = mongoose.model('Article')
   let article = await Article.find().exec()

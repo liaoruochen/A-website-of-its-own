@@ -9,13 +9,13 @@
                     </router-link>
                 </li>
                 <li class="title">
-                    <router-link to="/" class="type">
+                    <router-link to="/articlelist" class="type">
                         <img src="@/assets/label.png" alt="">
                         <span>Article</span>
                     </router-link>
                 </li>
                 <li class="title">
-                    <router-link to="/" class="type">
+                    <router-link to="/about" class="type">
                         <img src="@/assets/people.png" alt="">
                         <span>About</span>
                     </router-link>
@@ -64,6 +64,8 @@ export default {}
 
 .title span {
   line-height: 60px;
+  font-size: 18px;
+  margin-left: 10px
 }
 
 .title img {
