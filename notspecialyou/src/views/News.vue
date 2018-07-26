@@ -2,12 +2,21 @@
   <div>
     <div class="top">
       <input class='title' placeholder="输入文章标题..." style='font-size: 28px' v-model="title" />
+      <img class="ppp" @click="imgpush" src="@/assets/ppp.png" alt="">
       <el-button type='primary' :loading="openLoading" @click="publish">发布</el-button>
-      <img src="@/assets/222.png" alt="">
+      <img class="img" src="@/assets/222.png" alt="">
     </div>
     <div class="container">
       <mavon-editor v-model="content" ref="md" @imgAdd="$imgAdd" @change="change" style="min-height:100vh"/>
     </div>
+    <el-dialog title="提示" :visible.sync="push" width="80%" :before-close="handleClose">
+      <el-input v-model="url" placeholder="请输入url" clearable= true autofocus = true></el-input>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="push = false">取 消</el-button>
+        <el-button type="primary" @click="push = false">确 定</el-button>
+      </span> 
+    </el-dialog>
+
   </div>
 </template>
 
@@ -23,7 +32,9 @@ export default {
       html: '',
       configs: {},
       title: '',
-      openLoading: false
+      openLoading: false,
+      push: false,
+      url: ''
     }
   },
   components: {
@@ -54,9 +65,9 @@ export default {
         content: this.content,
         html: this.html,
         author: '不特别的你',
-        images: 'https://github.com/liaoruochen/A-website-of-its-own/blob/master/notspecialyou/src/assets/222.png?raw=true'
+        images: this.url
       }
-      if (data.title && data.content) {
+      if (data.title && data.content && data.images) {
         await postArticle(data).then((msg) => {
           this.$message({
             showClose: true,
@@ -69,7 +80,12 @@ export default {
         this.$message.error('请输入标题')
       } else if (!data.content) {
         this.$message.error('请输入文章内容')
+      } else if (!data.images) {
+        this.$message.error('请输入文章图片')
       }
+    },
+    imgpush () {
+      this.push = true
     }
   }
 }
@@ -78,22 +94,45 @@ export default {
 .top
   height 60px
   width 100%
-  min-width 320px
   display flex
   align-items center
-  justify-content center
   overflow hidden
-  img
+  background #fff
+  .ppp
     width 50px
     height 50px
+    margin-right 20px
+  .img
+    width 40px
+    height 40px
     border-radius 50%
     margin-left 20px
     margin-right 10px
     // border 1px solid black
-.title
-  height 60px
-  margin-left 20px
-  border 0;
-  outline none
-  flex 1
+  .title
+    height 60px
+    margin-left 20px
+    border 0;
+    outline none
+    width 70%
+    flex 1
+  @media screen and (max-width 475px)
+    .img
+      width 35px
+      height 35px
+      margin-left 5px
+      margin-right 5px
+
+    .ppp
+      width 35px
+      height 35px
+      margin-right 5px
+  @media screen and (max-width 320px)
+    .img
+      display none
+    .ppp
+      width 25px
+      height 25px
+      margin-right 3px
+  
 </style>
