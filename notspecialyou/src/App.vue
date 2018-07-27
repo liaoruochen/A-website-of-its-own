@@ -7,8 +7,17 @@
 </template>
 
 <script>
+import {Loading} from 'element-ui'
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    Loading.service({fullscreen: true, text: '拼命加载中'})
+  },
+  mounted () {
+    this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
+      Loading.service({fullscreen: true, text: '拼命加载中'}).close()
+    })
+  }
 }
 </script>
 

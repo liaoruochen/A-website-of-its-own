@@ -15,7 +15,7 @@ export default {
   components: {
     linkel
   },
-  methods : {
+  methods: {
     Refresh () {
       console.log('1')
       this.$router.go(0)

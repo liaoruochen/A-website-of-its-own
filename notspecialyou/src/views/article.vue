@@ -59,7 +59,7 @@ export default {
     height 50px
     border-radius 50%
     margin-right 30px
-    img 
+    img
       border-radius 50%
   .msg
     flex 1
@@ -72,7 +72,7 @@ export default {
   width 70%
   height 400px
   margin 0 auto
-  img 
+  img
     width 100%
     height 100%
 h2
@@ -82,7 +82,6 @@ h2
   font-weight 700
   font-size 38px
   margin-top 50px
-  
 @media screen and (max-width 600px)
   .art-box
     width 80%

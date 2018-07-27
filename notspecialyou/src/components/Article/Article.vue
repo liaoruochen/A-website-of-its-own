@@ -4,15 +4,15 @@
       <div style="padding:25px">
         <div class="list-top">
           <div class="author-img">
-            <img class="photo" src="@/assets/222.png" alt="">
-            <span class="size">{{item.author}}</span>
+            <img class="photo" @click="toabout" src="@/assets/222.png" alt="">
+            <span class="size" @click="toabout">{{item.author}}</span>
             <img class="rili" src="@/assets/time.png" alt="">
             <span class="size">{{item.data.split('T')[0]}}</span>
           </div>
         </div>
-        <img :src="item.images" class="bigphoto" alt="">
+        <img :src="item.images" class="bigphoto" @click="toessay(item._id,item)" alt="">
         <h2 class="title" @click="toessay(item._id,item)">{{item.title}}</h2>
-        <p class="content">{{item.content}}</p>
+        <p class="content" @click="toessay(item._id,item)">{{item.content}}</p>
       </div>
     </div>
   </div>
@@ -30,10 +30,12 @@ export default {
   methods: {
     toessay (id) {
       this.$router.push({ path: `/article/${id}` })
+    },
+    toabout () {
+      this.$router.push({path: '/about'})
     }
   },
   mounted () {
-    console.log(this.$refs)
   }
 }
 </script>

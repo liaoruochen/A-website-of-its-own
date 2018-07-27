@@ -13,6 +13,10 @@
         <hr>
         <p>目前大三，正在寻找实习单位。有意者可以联系我...</p>
 
+        <h3>我的简历</h3>
+        <hr>
+        <p><router-link to="/jianli">简历</router-link></p>
+
         <h3>关于学习</h3>
         <hr>
         <p>正在向终生学习者前进... (目标是成为一个优秀的全栈工程师...)  加油！</p>
@@ -55,10 +59,10 @@ export default {
 .about
   width 60%
   margin  0 auto
-  margin-bottom 50px 
+  margin-bottom 50px
   blockquote
     position relative
-    padding 1px 20px;
+    padding 1px 20px
     border-left 4px solid #0cc
     color #6e6e6e
     background #f5f5f5

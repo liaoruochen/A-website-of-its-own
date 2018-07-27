@@ -2,9 +2,9 @@
     <div class="list-box">
         <ul class="list">
             <li class="list-title">
-                <router-link to="/" class="list-type">
+                <router-link to="/login" class="list-type">
                     <img src="@/assets/home1.png" alt="">
-                    <span>Home</span>
+                    <span>Login</span>
                 </router-link>
             </li>
             <li class="list-title">

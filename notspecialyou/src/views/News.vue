@@ -14,7 +14,7 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="push = false">取 消</el-button>
         <el-button type="primary" @click="push = false">确 定</el-button>
-      </span> 
+      </span>
     </el-dialog>
 
   </div>
@@ -134,5 +134,4 @@ export default {
       width 25px
       height 25px
       margin-right 3px
-  
 </style>
